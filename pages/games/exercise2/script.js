@@ -65,29 +65,29 @@ let timeLeft = timelimit;
 let timeElapsed = 0;
 let total_errors = 0;
 let errors = 0;
-let current_quote = "";
-let quoteNo = 0;
+let currQuote = "";
+let quoteNum = 0;
 let timer = null;
 let score = -10;
 
 function updateQuote() {
     document.querySelector(".quote").textContent = null;
-    current_quote = quotes_array[quoteNo];
-    current_quote.split('').forEach(char => {
+    currQuote = quotes_array[quoteNum];
+    currQuote.split('').forEach(char => {
         const charSpan = document.createElement('span')
         charSpan.innerText = char
         document.querySelector(".quote").appendChild(charSpan)
     })
-    if (quoteNo < quotes_array.length - 1) {
-        quoteNo++;
+    if (quoteNum < quotes_array.length - 1) {
+        quoteNum++;
         score += 10;
         score_text.textContent = score;
     }
     else {
-        quoteNo = 0;
+        quoteNum = 0;
     }
 }
-function processCurrentText() {
+function currentText() {
     curr_input = document.querySelector(".input_area").value;
     curr_input_array = curr_input.split('');
     characterTyped++;
@@ -111,7 +111,7 @@ function processCurrentText() {
     });
     document.querySelector(".curr_errors").textContent = total_errors + errors;
     let correctCharacters = (characterTyped - (total_errors + errors));
-    if (curr_input.length == current_quote.length) {
+    if (curr_input.length == currQuote.length) {
         updateQuote();
         total_errors += errors;
         document.querySelector(".input_area").value = "";
