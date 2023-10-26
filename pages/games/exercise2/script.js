@@ -1,10 +1,12 @@
 let timelimit = 0;
-let difficulty = confirm("Difficulty");
-if (difficulty == true) {
-timelimit = 60;
-}
-else {
-    timelimit = 30;
+function difficulty(value) {
+    if (value == "easy") {
+        timelimit = 60;
+    } else if (value == "intermediate") {
+        timelimit = 30;
+    } else if (value == "hard") {
+        timelimit = 15;
+    }
 }
 let quotes_array = [
         "apple",
@@ -122,6 +124,7 @@ function startGame() {
     updateQuote();
     clearInterval(timer);
     timer = setInterval(updateTimer, 1000);
+    document.getElementById("difficulty_btns").style.display = "none";
 }
 
 function resetValues() {
@@ -138,6 +141,7 @@ function resetValues() {
     document.querySelector(".curr_time").textContent = timeLeft + 's';
     document.querySelector(".curr_errors").textContent = 0;
     score_text.textContent = 0;
+    document.getElementById("difficulty_btns").style.display = "block";
 }
 function updateTimer() {
     if (timeLeft > 0) {
