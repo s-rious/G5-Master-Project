@@ -1,56 +1,72 @@
 body {
-    background-image: url(images/Background.jpg);
+  background-image: url(images/Background.jpg);
 }
 
 /* new game page styling */
 
 .hover-1 {
-    transition: transform .2s;
+  transition: transform .2s;
 }
 
-.hover-1:hover{
-    transform: scale(1.2);
+.hover-1:hover {
+  transform: scale(1.2);
 }
 
 /* index styling */
 
 .hover-2 {
-    transition: transform .2s;
+  transition: transform .2s;
 }
 
-.hover-2:hover{
-    transform:scale(1.1);
+.hover-2:hover {
+  transform: scale(1.1);
 }
 
 /* exercise 1 styling */
 
 /* exercise 2 styling */
-    
-  .input_area { 
-    background-color: #f5f5c6; 
-    height: 80px; 
-    width: 40%; 
-    font-size: 1.5rem; 
-    border: 0px; 
-    overflow: hidden;
-  } 
-    
-  .restart_btn { 
-    display: none; 
-    background-color: #326765; 
-    font-size: 1.5rem; 
-    padding: 10px; 
-    border: 0px; 
-    box-shadow: black 5px 8px 5px; 
-  } 
-    
-  .incorrect_char { 
-    color: red; 
-    text-decoration: underline; 
-  } 
-    
-  .correct_char { 
-    color: darkgreen; 
-  } 
+
+.input_area {
+  background-color: #f5f5c6;
+  height: 80px;
+  width: 40%;
+  font-size: 1.5rem;
+  border: 0px;
+  overflow: hidden;
+}
+
+.restart_btn {
+  display: none;
+  background-color: #326765;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: 0px;
+  box-shadow: black 5px 8px 5px;
+}
+
+.incorrect_char {
+  color: red;
+  text-decoration: underline;
+}
+
+.correct_char {
+  color: darkgreen;
+}
 
 /* exercise 3 styling */
+
+#finalscore {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
