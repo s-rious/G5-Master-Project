@@ -44,7 +44,7 @@ Application Version 2.0.0
 ### Options
 <img src="" height="300">
 
-### Credits
+### Credits Page
 <img src="" height="300">
 
 ---
