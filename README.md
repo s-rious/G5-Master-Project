@@ -76,4 +76,9 @@ Application Version 2.0.0
 - Front-End Development by Samuel Mun and Annabelle Tran
 - Back-End Development by Cameron Rydwell, Samuel Mun, Trevor Toland, Annabelle Tran, and Sai Aishwarya Reddy Devarapalli.
 
+**Coding Languages**
+- HTML5, CSS, JavaScript
+- BootStrap environment
+- Coded in Visual Studio Code
+
 ---
