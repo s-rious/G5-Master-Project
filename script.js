@@ -285,6 +285,7 @@ function resetValues() {
     total_errors = 0;
     characterTyped = 0;
     quoteNo = 0;
+    score = 0;
     document.querySelector(".input_area").disabled = false;
 
     document.querySelector(".input_area").value = "";
