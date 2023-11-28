@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aimstyle.css">
+</head>
+<body>
+
+    <!-- back button -->
+    <div class="container row">
+        <a href="newgame.html" class="col m-5" style="text-decoration: none;">
+            <p class="fs-1 text-white"><i class="bi bi-arrow-left"></i>  Back</p>
+        </a>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+
+    <!-- title -->
+    <!-- <div class="container row mx-auto">
+        <div class="col"></div>
+        <p class="text-center col fs-1 text-white text-center border rounded-5">Aim Trainer</p>
+        <div class="col"></div>
+    </div> -->
+
+    <!-- level choose -->
+    <div id="main">
+        <div class="container row mx-auto">
+            <div class="col"></div>
+            <p class="text-center col fs-1 text-white text-center border rounded-5">Aim Trainer</p>
+            <div class="col"></div>
+        </div>
+        <div id="lvlbuts">
+            <button class="lvls text-white" id="lvl1" onclick="lvl1()">
+                <h2>Level 1</h2>
+                <h4 class="maintime">Time 0</h4>
+                <svg class="mainsvgs" width="70%" height="20vh" onload="loadmain(0.49, 30, 1)"></svg>
+            </button>
+            <button class="lvls text-white" id="lvl2" onclick="lvl2()">
+                <h2>Level 2</h2>
+                <h4 class="maintime">Time 0</h4>
+                <svg class="mainsvgs" width="70%" height="20vh" onload="loadmain(0.4, 30, 2)"></svg>
+
+            </button>
+            <button class="lvls text-white" id="lvl3" onclick="lvl3()">
+                <h2>Level 3</h2>
+                <h4 class="maintime">Time 0</h4>
+                <svg class="mainsvgs" width="70%" height="20vh" onload="loadmain(0.3, 30, 3)"></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- game function -->
+    <div id="game" class="container">
+        <div id="info" class="text-white">
+            <p id="score">Score: </p>
+            <p id="timer">0:00</p>
+            <p id="lvl">Level </p>
+        </div>
+        <svg id="circles" height="70vh" width="99.5%">
+        </svg>
+        <div id="result">
+            <h2 id="message">You Completed this Level!</h2>
+            <div id="lvlchoose">
+                <h3 id="choosemessage">Choose a level or click retry to continue on endless.</h3>
+                <div id="choosebuts">
+                    <button onclick="lvl1()">1</button>
+                    <button onclick="lvl2()">2</button>
+                    <button onclick="lvl3()">3</button>
+                </div>
+            </div>
+            <div id="resultbuts">
+                <button id="nxtrty">level</button>
+                <button onclick="resetnext('exit',0)">Exit</button>
+            </div>
+        </div>
+        <div id="exrebuts">
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap File -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+    <!-- script file -->
+    <script src="script1.js"></script>
+</body>
+</html>

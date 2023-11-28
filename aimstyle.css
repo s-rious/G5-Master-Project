@@ -1,0 +1,99 @@
+#lvlbuts {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lvls {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 13%;
+    padding: 0.8%;
+}
+
+.lvls:hover {
+    box-shadow: 0px 0px 10px black;
+}
+
+#game {
+    display: none;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 1% 0% 1%;
+    font-size: 200%;
+}
+
+#circles {
+    border: solid black 2px;
+    cursor: cell;
+}
+
+#result {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1%;
+    width: 40%;
+    height: 50vh;
+    background-color: blueviolet;
+    top: 23vh;
+    left: 27%;
+}
+
+#message {
+    text-align: center;
+}
+
+#resultbuts {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#resultbuts button {
+    background-color: brown;
+    width: 35%;
+    height: 5vh;
+}
+
+#lvlchoose {
+    display: none;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+#choosebuts {
+    display: flex;
+    justify-content: space-between;
+}
+
+#choosemessage {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+#choosebuts button {
+    background-color: brown;
+    width: 30%;
+    height: 5vh;
+}
+
+#exrebuts {
+    position: absolute;
+    top: 7%;
+    left: 94%;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#exrebuts button {
+    font-size: 1.5vw;
+}

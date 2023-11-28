@@ -1,72 +1,329 @@
 body {
-  background-image: url(images/Background.jpg);
+    background-image: url(images/Background.jpg);
 }
 
 /* new game page styling */
 
 .hover-1 {
-  transition: transform .2s;
+    transition: transform .2s;
 }
 
-.hover-1:hover {
-  transform: scale(1.2);
+.hover-1:hover{
+    transform: scale(1.2);
 }
 
 /* index styling */
 
 .hover-2 {
-  transition: transform .2s;
+    transition: transform .2s;
 }
 
-.hover-2:hover {
-  transform: scale(1.1);
+.hover-2:hover{
+    transform:scale(1.1);
 }
 
 /* exercise 1 styling */
 
 /* exercise 2 styling */
-
-.input_area {
-  background-color: #f5f5c6;
-  height: 80px;
-  width: 40%;
-  font-size: 1.5rem;
-  border: 0px;
-  overflow: hidden;
-}
-
-.restart_btn {
-  display: none;
-  background-color: #326765;
-  font-size: 1.5rem;
-  padding: 10px;
-  border: 0px;
-  box-shadow: black 5px 8px 5px;
-}
-
-.incorrect_char {
-  color: red;
-  text-decoration: underline;
-}
-
-.correct_char {
-  color: darkgreen;
-}
+    
+  .input_area { 
+    background-color: #f5f5c6; 
+    height: 80px; 
+    width: 40%; 
+    font-size: 1.5rem; 
+    border: 0px; 
+    overflow: hidden;
+  } 
+    
+  .restart_btn { 
+    display: none; 
+    background-color: #326765; 
+    font-size: 1.5rem; 
+    padding: 10px; 
+    border: 0px; 
+    box-shadow: black 5px 8px 5px; 
+  } 
+    
+  .incorrect_char { 
+    color: red; 
+    text-decoration: underline; 
+  } 
+    
+  .correct_char { 
+    color: darkgreen; 
+  } 
 
 /* exercise 3 styling */
 
-#finalscore {
+/* settings and credits page */
+.volumebox{
+  display: grid;
+  grid-template-areas: "volume percent";
+  grid-template-columns: 92.5% 5%;
+  margin-bottom: 1vw;
+}
+.percent{
+  grid-area: "percent";
+  font-size: 1.5vw;
+  margin-left: 2vw;
+}
+.screen{
+  display: grid;
+  grid-template-columns: 50% 5%;
+}
+.screen p{
+  font-size: 2vw;
+  margin: 1.5vw 5vw;
+}
+.resolution{
+  display: grid;
+  grid-template-columns: 45% 15%;
+  font-size: 3vw;
+}
+.resolution p{
+  font-size: 2vw;
+  margin: 1.5vw 5vw;
+}
+.resolution input{
+  font-size: 2vw;
+}
+.exit{
+  text-align: center;
+  border: .25vw solid white;
+  border-radius: 10vw;
+  padding: 1vw;
+  font-size: 2.5vw;
+  background-color: rgb(255, 255, 255, 0.22);
+  margin: 1vw 35vw;
+}
+.navButton{
+  text-decoration: none;
+  color: white;
+}
+.creditspage{
+  text-align: center;
+}
+.creditspage h1{
+  font-size: 3.5vw;
+}
+.credit{
+  font-size: 2.5vw;
+}
+.return{
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border: .25vw solid white;
+  border-radius: 10vw;
+  padding: 1vw 5vw;
+  font-size: 2.5vw;
+}
+input[type = "range"]{
+  grid-area: "volume";
+  -webkit-appearance: none;
+  height: 5vw;
+  background: rgba(255, 255, 255, 0.22);
+  border: .25vw solid white;
+  border-radius: 10vw;
+  overflow: hidden;
+}
+input[type = "range"]::-webkit-slider-runnable-track{
+  border-radius: 10vw;
+}
+input[type = "range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 5vw;
+  width: .25vw;
+  background-color: white;
+  box-shadow: -50vw 0 0 50vw rgba(255,255,255,0.5);;
+}
+.voltitle{
+  font-size: 2vw;
+}
+
+/* exercise 3 styling */
+#gameContainer {
+  text-align: center;
+  padding: 20px;
+}
+o
+#gameInfo {
+  margin-bottom: 20px;
+}
+
+
+#gameArea {
   display: flex;
-  flex-direction: column;
-  position: absolute;
   justify-content: center;
   align-items: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  font-size: 100px;
-  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px 0;
 }
+
+#shapes, #silhouettes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
+  min-width: 300px;
+}
+
+
+.shape{
+  width: 150px;
+  height: 150px;
+  border: 3px solid black;
+  margin: 14px;
+      align-items: center;
+  cursor: pointer;
+  background-color: darkblue;
+}
+
+.circle {
+  background-color:red;
+  border-radius: 130%;
+}
+.ellipse {
+  background-color: violet;
+  width: 250px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.square {
+  background-color: greenyellow;
+}
+
+.rectangle {
+  background-color: rgb(166, 0, 55);
+  width: 200px;
+}
+
+
+
+
+
+
+.oval {
+  background-color: purple;
+  border-radius: 90%;
+  width: 200px;
+}
+
+.diamond {
+  width: 60px;
+  height: 60px;
+  border: 50px solid transparent;
+ 
+  position: relative;
+  top: -35px;
+  transform: rotate(45deg);
+}
+.diamond:after {
+  content: '';
+  position: absolute;
+  top: 50px; 
+  left: -50px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+ 
+}
+
+
+
+.silhouette {
+  width: 150px;
+  height: 150px;
+  border: 3px solid white;
+  margin: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.circleSilhouette {
+  border-radius: 100%;
+}
+
+.ellipseSilhouette {
+  width: 250px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+
+
+.rectangleSilhouette {
+  width: 200px;
+
+}
+
+/*.triangleSilhouette {
+
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid  rgb(190, 187, 187);
+  }
+     
+  
+ */ 
+.ovalSilhouette {
+  border-radius: 90%;
+  width: 230px;
+}
+
+.diamondSilhouette {
+  width: 60px;
+  height: 60px;
+  border: 50px solid transparent;
+  border-bottom: 70px solid rgb(190, 187, 187);
+  position: relative;
+  top: -35px;
+  transform: rotate(45deg); 
+}
+
+
+h1 {
+padding: 18;
+font-size: larger;
+font-style: normal;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background-color: rgb(141, 137, 131);
+font-weight: bold;
+text-align: center; 
+/*color: rgb(191, 211, 231);*/
+}
+
+
+
+#hiddenDragImage {
+  position: absolute;
+  top: -1000px;
+}
+
+.btn {
+  font-size: 20px;
+  background-color: rgb(22, 89, 206);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 21px;
+padding: 10px;
+padding-left: 30px;
+border-radius: 5px;
+padding-top : 10px;
+color: blanchedalmond;
+transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+.btn1:hover{
+  background-color: rgb(22, 89, 206);
+}
+.gameContainer{
+background-color: white;
+border: 3px solid #ccc;
+box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+
+}
+
