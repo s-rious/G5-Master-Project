@@ -210,6 +210,7 @@ let quotes_array = [
     "quokka",
     "rhinoceros"
 ];
+document.querySelector("#finalscore").style.display = "none";
 let error_group = document.querySelector(".errors");
 let score_text = document.querySelector(".curr_score");
 
@@ -285,6 +286,7 @@ function resetValues() {
     characterTyped = 0;
     quoteNo = 0;
     score = 0;
+    
     document.querySelector(".input_area").disabled = false;
 
     document.querySelector(".input_area").value = "";
@@ -293,6 +295,7 @@ function resetValues() {
     document.querySelector(".curr_errors").textContent = 0;
     score_text.textContent = 0;
     document.getElementById("difficulty_btns").style.display = "block";
+    document.querySelector("#finalscore").style.display = "none";
 }
 function updateTimer() {
     if (timeLeft > 0) {
@@ -308,6 +311,6 @@ function finishGame() {
     clearInterval(timer);
     document.querySelector(".input_area").disabled = true;
     document.querySelector(".quote").textContent = "Click on restart to start a new game.";
-    document.querySelector(".restart_btn").style.display = "block";
-    alert("Final score: " + (score - total_errors));
+    document.querySelector("#finalscore").style.display = "flex";
+    document.querySelector("#final_score").textContent = (score - total_errors);
 }
